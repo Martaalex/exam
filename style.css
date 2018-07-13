@@ -10,9 +10,9 @@ html{
 }
 
 body{
-  width:1900px;
-   height:2000px;
-   margin:0 auto;
+  width:auto;
+   height:auto;
+   margin: auto;
 }
 main {
   background-color: #947bb0;
@@ -24,6 +24,64 @@ main {
   padding: 10px; */
 }
 
+ h1, h3, p {
+   margin: 20px;
+ }
+
+/*!!!!!!!!!!
+!!!!!!!!! Logo triangle circle square!!!!!!!!!!
+!!!!!!!!!!!!*/
+
+ .logo{
+ display:flex;
+
+   justify-content: center;
+   align-items: center;
+   height: 30vh;
+ }
+
+.triangle {
+    position:relative;
+    /*background: lightgrey;*/
+    width: 35px;
+      height: 50px;
+      border-bottom: 1px solid #ffffff;
+}
+
+.triangle:before, .triangle:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height:100%;
+}
+
+.triangle:before {
+  border-left: 1px solid #ffffff;
+  left: 0;
+  transform: rotate(20deg);
+  transform-origin: bottom left;
+}
+
+.triangle:after {
+  border-right: 1px solid #ffffff;
+  right: 0;
+  transform: rotate(-20deg);
+  transform-origin: bottom right;
+}
+
+.circle {
+  height: 50px;
+  width: 50px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  margin: -24px;
+}
+.square {
+   height: 50px;
+  width: 50px;
+  border: 1px solid #ffffff;
+
+}
  a {
   text-decoration: none;
    color: #ffff;
@@ -45,42 +103,48 @@ section.photos{
  display: flex;
 
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
 
 .picture1{
   flex: 1 200px;
-
-  /* display: inline-block; */
-  background-image: url(2.jpg);
+  background-image: url(n.jpg);
   background-repeat: no-repeat;
       background-size:100%;
       text-align: center;
-      /* border: 0px solid ;
-   padding: 5px;
-   width: 300px; */
 height: 690px;
 }
 .picture2{
   flex: 1 200px;
-
-  /* display: inline-block; */
-  background-image: url(3.jpg);
+  background-image: url(2.jpg);
   background-repeat: no-repeat;
      background-size:100%;
      border: 0px solid ;
      text-align: center;
-   /* padding: 5px;
-   width: 300px;
-height: 690px; */
 }
 .picture3{
   flex: 1 200px;
-
-  /* display: inline-block; */
-  background-image: url(n.jpg);
+  background-image: url(3.jpg);
   background-repeat: no-repeat;
       background-size: 100%;
       text-align: center;
-   /* padding: 5px;
-   width: 300px; */
 height: 690px;
 }
