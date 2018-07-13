@@ -101,18 +101,22 @@ header {
 section.photos{
  flex: 3 200px;
  display: flex;
+ height: 640px;
 
 }
+
+article{
+margin-top: 200px;
+margin-left: auto;
+margin-right: auto;
+
+  }
+
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: transparent;
-    position:fixed;
-    top: 0;
-    width: 100%;
+  list-style-type: none;
+    position: fixed;
     display: flex;
+        z-index: 2;
 }
 
 li a {
@@ -130,7 +134,8 @@ li a {
   background-repeat: no-repeat;
       background-size:100%;
       text-align: center;
-height: 690px;
+
+
 }
 .picture2{
   flex: 1 200px;
@@ -146,5 +151,25 @@ height: 690px;
   background-repeat: no-repeat;
       background-size: 100%;
       text-align: center;
-height: 690px;
+
+}
+
+.darken-pseudo {
+  position: relative;
+}
+
+.darken-pseudo:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.darken-with-text article  {
+  position: relative;
+  z-index: 1;
 }
